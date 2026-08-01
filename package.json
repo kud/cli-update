@@ -1,0 +1,48 @@
+{
+  "name": "@kud/cli-update",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Tell users when a @kud CLI has an update, without blocking startup or corrupting piped output",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "build:watch": "tsup --watch",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "prepublishOnly": "npm run build"
+  },
+  "homepage": "https://kud.io/projects/cli-update",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kud/cli-update.git"
+  },
+  "author": "kud",
+  "license": "MIT",
+  "engines": {
+    "node": ">=22.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "semver": "7.8.5"
+  },
+  "devDependencies": {
+    "@types/node": "26.1.2",
+    "@types/semver": "7.7.1",
+    "tsup": "8.5.1",
+    "typescript": "6.0.3",
+    "vitest": "4.1.10"
+  }
+}
