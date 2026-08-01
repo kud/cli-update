@@ -14,4 +14,7 @@ export {
   enableNotices,
   noticesEnabled,
 }
+export { notify } from "./notify.js"
+export { promptUpgrade, upgrade, banner } from "./upgrade.js"
+export type { UpgradeOutcome } from "./upgrade.js"
 export type { UpdateNotice, CheckForUpdateOptions }

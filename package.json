@@ -37,10 +37,14 @@
     "access": "public"
   },
   "dependencies": {
+    "@kud/ink-ui": "0.13.1",
+    "ink": "7.1.1",
+    "react": "19.2.8",
     "semver": "7.8.5"
   },
   "devDependencies": {
     "@types/node": "26.1.2",
+    "@types/react": "19.2.18",
     "@types/semver": "7.7.1",
     "tsup": "8.5.1",
     "typescript": "6.0.3",
