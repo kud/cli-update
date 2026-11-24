@@ -3,8 +3,14 @@ import { defineConfig } from "tsup"
 export default defineConfig({
   // banner-child is its own entry, not bundled into index: it must stay a
   // separate file so notify() can spawn it as a process. That separation is
-  // what keeps Ink and React out of the calling CLI.
-  entry: ["src/index.ts", "src/check-child.ts", "src/banner-child.tsx"],
+  // what keeps Ink and React out of the calling CLI. banner-app is its own
+  // entry too, so banner-child can set NODE_ENV before React is loaded.
+  entry: [
+    "src/index.ts",
+    "src/check-child.ts",
+    "src/banner-child.ts",
+    "src/banner-app.tsx",
+  ],
   format: ["esm"],
   dts: {
     // rollup-plugin-dts always forces a baseUrl onto the synthesized compiler

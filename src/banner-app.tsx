@@ -1,7 +1,7 @@
-// Runs as its own process, spawned by notify(). This is the whole point of the
-// separation: Ink and React are loaded *here*, never in the CLI that called us.
-// A plain commander CLI with no interest in Ink still gets the rendered banner,
-// because the rendering happens somewhere else entirely.
+// Loaded by banner-child.js, the process notify() spawns. This is the whole
+// point of the separation: Ink and React are loaded *here*, never in the CLI
+// that called us. A plain commander CLI with no interest in Ink still gets the
+// rendered banner, because the rendering happens somewhere else entirely.
 import React, { useState } from "react"
 import { render, Box, Text, useApp, useInput } from "ink"
 import { UpdateBanner, Spinner } from "@kud/ink-ui"
